@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky-Mobile-Support | Mobile Phones, Upgrades & SIM Guidance UK</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+    body {
+      background: #f6f9fc;
+      color: #0a1a2f;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* ----- TOP DISCLAIMER (Google Ads compliant) ----- */
+    .top-disclaimer {
+      background: #0b1a2e;
+      color: #facc15;
+      padding: 12px 0;
+      font-size: 0.9rem;
+      text-align: center;
+      border-bottom: 2px solid #facc15;
+    }
+    .top-disclaimer i { margin-right: 8px; }
+    .top-disclaimer strong { color: #ffffff; }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      padding: 18px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .header-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0b1a2e;
+    }
+    .logo h1 span { color: #2563eb; }
+    .logo small {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #475569;
+      letter-spacing: 0.5px;
+    }
+    .header-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .header-contacts a {
+      color: #0b1a2e;
+      text-decoration: none;
+      font-weight: 600;
+      background: #f1f5f9;
+      padding: 8px 20px;
+      border-radius: 40px;
+      transition: 0.2s;
+      font-size: 1.05rem;
+    }
+    .header-contacts a i {
+      color: #2563eb;
+      margin-right: 8px;
+    }
+    .header-contacts a:hover { background: #e2e8f0; }
+
+    /* NAV */
+    nav {
+      background: #ffffff;
+      padding: 10px 0;
+      border-bottom: 1px solid #e9edf2;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    nav ul li a:hover { color: #2563eb; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(145deg, #eef4ff 0%, #ffffff 100%);
+      padding: 50px 0 40px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+    .hero-text {
+      flex: 2;
+      min-width: 280px;
+    }
+    .hero-text h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0b1a2e;
+      line-height: 1.2;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin: 20px 0;
+      max-width: 650px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      padding: 14px 34px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      border: none;
+      font-size: 1rem;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #2563eb;
+      color: #2563eb;
+    }
+    .btn-outline:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    .btn i { margin-right: 8px; }
+    .hero-image {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+    }
+    .img-placeholder {
+      background: #e2eaf5;
+      border-radius: 30px;
+      padding: 25px 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .img-placeholder i {
+      font-size: 4.5rem;
+      color: #2563eb;
+    }
+    .img-placeholder p {
+      margin-top: 8px;
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 50px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0b1a2e;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      color: #475569;
+      max-width: 750px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: #fff;
+      padding: 28px 18px;
+      border-radius: 28px;
+      border: 1px solid #ecf1f7;
+      transition: 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .card i {
+      font-size: 2.5rem;
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+    .card p { color: #475569; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 22px;
+      margin: 30px 0;
+    }
+    .step-item {
+      background: #fff;
+      padding: 22px 14px;
+      border-radius: 30px;
+      text-align: center;
+      border: 1px solid #e9edf2;
+    }
+    .step-item .num {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #2563eb;
+    }
+    .step-item h4 { margin: 8px 0 4px; }
+
+    /* FOOTER */
+    .footer {
+      background: #0b1a2e;
+      color: #e2e8f0;
+      padding: 40px 0 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 40px;
+    }
+    .footer h4 {
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer ul {
+      list-style: none;
+    }
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+    .footer ul li a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+    .footer ul li a:hover { color: #facc15; }
+    .footer-bottom {
+      border-top: 1px solid #1e2f4a;
+      margin-top: 30px;
+      padding-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    .footer-disclaimer {
+      background: #071326;
+      padding: 16px 0;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      border-top: 1px solid #1e2f4a;
+    }
+
+    @media (max-width: 700px) {
+      .hero-text h2 { font-size: 2rem; }
+      .header-flex { flex-direction: column; align-items: start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP DISCLAIMER - independent guidance, not a network -->
+  <div class="top-disclaimer">
+    <div class="container">
+      <i class="fas fa-info-circle"></i> <strong>Independent guidance service</strong> — We are not a network, not affiliated with Apple, Samsung, or any mobile provider. We provide information and guidance only.
+      <i class="fas fa-phone-alt" style="margin-left:20px;"></i> 0808 164 9220 &nbsp;|&nbsp; 0204 514 2882
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-flex">
+      <div class="logo">
+        <h1>Sky-<span>Mobile-Support</span></h1>
+        <small>Guidance · upgrades · SIM · information</small>
+      </div>
+      <div class="header-contacts">
+        <a href="tel:08081649220"><i class="fas fa-phone"></i> 0808 164 9220</a>
+        <a href="tel:02045142882"><i class="fas fa-phone"></i> 0204 514 2882</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Mobile Phones</a></li>
+        <li><a href="#">Upgrade Deals</a></li>
+        <li><a href="#">SIM & Plans</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h2>Mobile Phone Upgrades & SIM Guidance UK</h2>
+        <p><strong>Sky-Mobile-Support</strong> – independent guidance service based in London. We provide information on mobile phones, upgrades, SIM & data plans. We are not a network and do not sell contracts.</p>
+        <div class="hero-buttons">
+          <a href="tel:08081649220" class="btn"><i class="fas fa-phone"></i> Call 0808 164 9220</a>
+          <a href="#" class="btn btn-outline"><i class="fas fa-file-invoice"></i> Get Guidance</a>
+        </div>
+        <p style="margin-top:16px; font-size:0.95rem;"><i class="fas fa-check-circle" style="color:#2563eb;"></i> Free guidance · No obligation · 24/7 support</p>
+      </div>
+      <div class="hero-image">
+        <div class="img-placeholder">
+          <i class="fas fa-mobile-alt"></i>
+          <p>Unlocked phones & accessories</p>
+          <div style="background:#d1dce8; padding:8px; border-radius:40px; margin-top:10px; font-weight:500;">
+            <i class="fas fa-sim-card"></i> SIM & data plan guidance
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE OFFER (detailed, no PAC/contract cancellation) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What We Offer – Guidance on Mobile, Upgrades & SIM</h2>
+      <p class="section-sub">We provide clear, independent information about mobile phones, upgrade options, SIM plans, and data packages. We are not a network and do not handle PAC codes or cancellations.</p>
+      <div class="cards">
+        <div class="card"><i class="fas fa-mobile-alt"></i><h3>Mobile Phone Information</h3><p>Unbiased guidance on new & pre‑owned unlocked devices, accessories, and features.</p></div>
+        <div class="card"><i class="fas fa-tags"></i><h3>Upgrade Guidance</h3><p>Understand upgrade options, quotes, and how to compare deals without pressure.</p></div>
+        <div class="card"><i class="fas fa-sync-alt"></i><h3>Upgrade Your Device</h3><p>Learn about contract terms, upgrade eligibility, and available packages.</p></div>
+        <div class="card"><i class="fas fa-wifi"></i><h3>SIM & Data Plans</h3><p>Guidance on SIM upgrades, data plans, internet packages, and what suits you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS + STEPS (removed PAC/cancellation references) -->
+  <section class="section" style="background:#f1f6fc;">
+    <div class="container">
+      <h2 class="section-title">How We Help – Simple Guidance Steps</h2>
+      <p class="section-sub">Four straightforward steps to get the information you need about mobile upgrades and SIM plans.</p>
+      <div class="steps">
+        <div class="step-item"><div class="num">1</div><h4>Call Us</h4><p>Ring for upgrade help & information.</p></div>
+        <div class="step-item"><div class="num">2</div><h4>Discuss Options</h4><p>We review your situation and explain available options.</p></div>
+        <div class="step-item"><div class="num">3</div><h4>Get Guidance</h4><p>Receive clear, no‑obligation guidance and quotes.</p></div>
+        <div class="step-item"><div class="num">4</div><h4>Decide</h4><p>Make an informed decision with confidence.</p></div>
+      </div>
+      <div style="background:#fff; border-radius:28px; padding:25px; margin-top:16px; border:1px solid #e2e8f0;">
+        <p><strong><i class="fas fa-phone-alt" style="color:#2563eb;"></i> Call now for mobile upgrades, SIM plans & guidance:</strong> <span style="font-weight:700;">0808 164 9220</span>  |  <span style="font-weight:700;">0204 514 2882</span></p>
+        <p style="font-size:0.95rem; color:#475569;">We assist with <strong>upgrade your device, upgrade sim, upgrade mobile plans, upgrade sim data, upgrade internet data, upgrade packages</strong> — we provide information, we are not a network.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED INFO: UPGRADE, PLANS (no PAC/cancellation) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Mobile Phone Upgrades, Plans & Contract Information</h2>
+      <p><strong>Sky-Mobile-Support</strong> is an independent guidance service based in London. We provide information on unlocked mobile devices and accessories. We are not affiliated with Apple, Samsung, or any network provider. We do not sell contracts or handle cancellations.</p>
+      <p style="margin:16px 0;">Before upgrading, it's important to check your contract terms, upgrade periods and available options. We help you understand <strong>phone upgrade quotes</strong> and provide clear <strong>phone plan comparison UK</strong> guidance so you can avoid extra charges. Whether you need better cameras, faster performance, or longer battery life – we provide the information you need.</p>
+      <p>We also offer guidance on <strong>SIM upgrades, data plans, and internet packages</strong>. We are not a network and do not process PAC codes or cancellations.</p>
+      <div style="background:#eef4ff; border-radius:24px; padding:20px; margin-top:20px;">
+        <i class="fas fa-check-circle" style="color:#2563eb;"></i> <strong>Data transfer guidance</strong> – we provide information on how to move contacts, photos, apps & files safely.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h4>Sky-Mobile-Support</h4><p>Independent guidance service, London UK. Information on mobile phones, upgrades, SIM & data plans.</p><p style="margin-top:10px;"><i class="fas fa-phone"></i> 0808 164 9220<br><i class="fas fa-phone"></i> 0204 514 2882</p></div>
+      <div><h4>Services</h4><ul><li><a href="#">Mobile Phone Guidance</a></li><li><a href="#">Upgrade Information</a></li><li><a href="#">SIM & Data Plans</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h4>Support 24/7</h4><p><i class="fas fa-headset"></i> Live help · Free advice</p><p><i class="fas fa-check-circle"></i> No obligation guidance</p></div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Sky-Mobile-Support. All rights reserved.</span>
+      <span><i class="fas fa-shield-alt"></i> Independent guidance – not a network, not affiliated with any provider.</span>
+    </div>
+    <div class="footer-disclaimer">
+      <div class="container">
+        <i class="fas fa-exclamation-triangle" style="color:#facc15;"></i> <strong>Disclaimer:</strong> Sky-Mobile-Support is an independent guidance service based in London. We provide information and guidance only. We are not a network, not an official partner, authorised dealer, or affiliated with Apple, Samsung, or any mobile provider. We do not sell contracts, process payments, or handle PAC codes or cancellations. All purchases or agreements are made directly with the respective service provider. We hold full ownership and operational control over our information and marketing activities.
+      </div>
+    </div>
+  </footer>
+
+  <!-- floating call to action -->
+  <div style="position:fixed; bottom:20px; right:20px; background:#0b1a2e; color:#facc15; padding:12px 22px; border-radius:60px; box-shadow:0 8px 20px rgba(0,0,0,0.2); z-index:999;">
+    <a href="tel:08081649220" style="color:#fff; text-decoration:none; font-weight:600;"><i class="fas fa-phone"></i> 0808 164 9220</a>
+  </div>
+
+  <!-- POP-UP modal (timed) - guidance focus, no network pretence -->
+  <div id="popupModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); backdrop-filter:blur(3px); align-items:center; justify-content:center; z-index:9999;">
+    <div style="background:#ffffff; max-width:460px; width:90%; border-radius:40px; padding:30px 25px; text-align:center; box-shadow:0 30px 60px rgba(0,0,0,0.3); position:relative;">
+      <span id="closePopup" style="position:absolute; top:12px; right:20px; font-size:1.8rem; cursor:pointer; color:#94a3b8;">&times;</span>
+      <i class="fas fa-phone-alt" style="font-size:3rem; color:#2563eb; margin-bottom:10px;"></i>
+      <h2 style="font-size:1.8rem; color:#0b1a2e; margin-bottom:8px;">Get Free Guidance</h2>
+      <p style="color:#2c3e50; font-size:1.1rem;">Talk to us about upgrades, SIM plans, data packages — independent advice, no obligation.</p>
+      <div style="background:#f1f5f9; border-radius:60px; padding:12px; margin:20px 0;">
+        <a href="tel:08081649220" style="display:block; background:#2563eb; color:#fff; padding:14px; border-radius:60px; text-decoration:none; font-weight:700; font-size:1.3rem;"><i class="fas fa-phone"></i> 0808 164 9220</a>
+      </div>
+      <div style="display:flex; justify-content:center; gap:20px; font-size:0.9rem; color:#475569;">
+        <span><i class="fas fa-check-circle" style="color:#2563eb;"></i> Free guidance</span>
+        <span><i class="fas fa-check-circle" style="color:#2563eb;"></i> No obligation</span>
+        <span><i class="fas fa-check-circle" style="color:#2563eb;"></i> 24/7</span>
+      </div>
+      <p style="font-size:0.8rem; color:#94a3b8; margin-top:14px;">Independent guidance. Not a network, not affiliated with any provider.</p>
+    </div>
+  </div>
+
+  <script>
+    // Show popup after 8 seconds
+    setTimeout(function() {
+      document.getElementById('popupModal').style.display = 'flex';
+    }, 8000);
+
+    // Close popup
+    document.getElementById('closePopup').addEventListener('click', function() {
+      document.getElementById('popupModal').style.display = 'none';
+    });
+    // Click outside to close
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('popupModal');
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
